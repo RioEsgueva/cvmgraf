@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>CVMgraf</title>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <script src="cvmgraf.js"></script>
+ <link rel="stylesheet" href="cvmgraf.css" type="text/css" />
+</head>
+
+<body>
+<header>
+<h1 class="logo_txt"><span class="letra1">C</span>VMgraf</h1>
+<p class="beta_webapp logo_txt">WEBAPP &nbsp;&nbsp;&nbsp; (alfa)</p>
+<p>Esta aplicación crea gráficos de velocidades en líneas de tren, dando una interpretación gráfica a la información recogida en los cuadros de velocidades máximas (CVMs) de ADIF.<br>Esta página usa galletas (<i>cookies</i>) para mostrar la publicidad, más información <a href="../galletas.html">aquí.</a></p>
+</header>
+<br>
+<iframe data-aa='58066' src='//ad.a-ads.com/58066?size=468x60' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
+<br>
+<h2>Funcionamiento</h2>
+<p>Para mostrar un gráfico se debe introducir los datos de una línea en el recuadro de datos y pulsarse en el botón de mostrar gráfico. También se pueden cargar algunos ejemplos. Es recomendable editar el texto en un editor especializado, que resalte la sintáxis, así se podrán ver errores de formato antes. También es recomendable crear la lista de datos con la ayuda de una hoja de cálculo.</p>
+<p>Mi consejo para crear un gráfico nuevo es partir de un fichero de ejemplo y modificarlo con los datos de la nueva línea.<br>
+Los datos están en formato JSON, que tiene un formato que es relatívamente fácil de manipular por personas.</p>
+<p>Esta es la estructura de datos usada:</p>
+<ul>
+<li><b>titular:</b> el nombre que aparece en la parte superior.</li>
+<li><b>max_v:</b> velocidad máxima a usar en el gráfico (recomiendo usar valores similares para tipos de líneas simlares, por ejemplo, 320 para alta velocidad, 250 para velocidad alta, 160 o 200 para líneas convencionales...).</li>
+<li><b>max_d:</b> longitud de la línea en metros.</li>
+<li><b>minf:</b> márgen inferior, conviene ajustarlo para que entren todos los nombres.</li>
+<li><b>tabla_pobl:</b> tabla con las poblaciones, cada entrada tiene dos variables:<ul><li><b>nombre:</b> el nombre del lugar.</li><li><b>pos:</b> posición, medida en metros.</li><li><b>ajuste:</b> permite ajustar la posición del texto para evitar solapamientos, normalmente se deja en 0.</li></ul></li>
+<li><b>tabla_vars:</b> tabla donde se describe el aspecto que mostrará el gráfico:<ul><li><b>tabla:</b> el nombre interno de la tabla.</li><li><b>color:</b> el color de relleno del gráfico (valen varios formatos usados en CSS: nombre, #RGB, HSL(), RGB()... consulta algún manual de CSS o HTML si no lo conoces).</li><li><b>trans:</b> transparencia del relleno o de la línea (1 es opaco).</li><li><b>grosor:</b> si es 0 se dibuja un área sólida, si es un número diferente será sólo la línea de velocidades.</li><li><b>finalizar:</b> si es 0 la línea o área se termina hasta el final del gráfico, si es 0 en cambio se deja incompleto (es útil para datos relativos a zonas sueltas del gráfico).</li><li><b>leyenda:</b> si vale 0 la línea no se muestra en la leyenda.</li><li><b>texto:</b> el texto que se muestra.</li></ul></li>
+<li><b><i>(nombre interno de cada tabla)</i>:</b> es cada tabla con los datos de la velocidad, cada entrada tiene dos variables:<ul><li><b>inicio:</b> punto donde está cada cambio de velocidad, con la distancia medida en metros.</li><li><b>velocidad:</b> velocidad del nuevo tramo.</li></ul></li>
+</ul>
+<p>Una hoja de cálculo puede ser de ayuda para elaborar los datos (<a href="Valladolid-Ariza2.ods">puedes usar esta</a>).<br>
+En la lista de velocidades debe incluir el punto inicial y los intermedios, no el último punto donde se termina (para cerrar el gráfico la variable max_d ya indica ese dato).<br>
+Se debe cuidar no romper el formato. También hay que tener en cuenta que la última entrada de las tablas no lleva coma al final.<br>
+El gráfico se puede copiar guardando el código que aparece en el segundo recuadro como fichero SVG.</p>
+<p>En líneas cerradas puedes buscar documentación, si conoces el radio de las curvas se puede calcular la velocidad teórica.</4:20 02/05/2015p>
+<hr>
+
+
+  <h2>Datos</h2>
+<p>Información de la línea en formato JSON:</p>
+  <form name="frm_datos_fc">
+  <textarea rows="15" cols="60" name="txtarea_datos_fc">{"fc":{
+  "titular": "Villalba de Guadarrama - Segovia (110)",
+  "max_v": 120,
+  "max_d": 62700,
+  "alto": 400,
+  "ancho": 1000,
+  "minf": 250,
+  "tabla_pobl": [
+    {"nombre":"Villalba de Guadarrama", "pos":0, "ajuste":0},
+    {"nombre":"Los negrales (APD)", "pos":1900, "ajuste":0},
+    {"nombre":"Alpedrete", "pos":4600, "ajuste":0},
+    {"nombre":"Collado mediano", "pos":10600, "ajuste":0},
+    {"nombre":"Los molinos - Guadarrama", "pos":14200, "ajuste":0},
+    {"nombre":"Cercedilla", "pos":19700, "ajuste":0},
+    {"nombre":"Tablada", "pos":26500, "ajuste":0},
+    {"nombre":"Los Gudillos (APD)", "pos":29800, "ajuste":0},
+    {"nombre":"San Rafael (APD)", "pos":32200, "ajuste":0},
+    {"nombre":"El Espinar", "pos":35400, "ajuste":0},
+    {"nombre":"Los Ángeles de San R (APD)", "pos":40800, "ajuste":0},
+    {"nombre":"Otero-Herreros (APD)", "pos":43800, "ajuste":0},
+    {"nombre":"Ortigosa del Monte (APD)", "pos":49200, "ajuste":0},
+    {"nombre":"Navas de Riofrío-La losa", "pos":52700, "ajuste":0},
+    {"nombre":"Segovia", "pos":62700, "ajuste":0}
+  ],
+  "tabla_vars": [
+    {"tabla":"tabla_v_tipo_A", "color":"#f80", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (resto de trenes)"},
+    {"tabla":"tabla_v_tipo_N", "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N exepto UT/440)"}
+  ],
+  "tabla_v_tipo_A": [
+    {"inicio":0, "velocidad":90},
+    {"inicio":74, "velocidad":70},
+    {"inicio":401, "velocidad":90},
+    {"inicio":10667, "velocidad":80},
+    {"inicio":10917, "velocidad":90},
+    {"inicio":19231, "velocidad":80},
+    {"inicio":20083, "velocidad":90},
+    {"inicio":43229, "velocidad":80},
+    {"inicio":43550, "velocidad":90},
+    {"inicio":49200, "velocidad":100},
+    {"inicio":62700, "velocidad":95}
+  ],
+  "tabla_v_tipo_N": [
+    {"inicio":0,      "velocidad":85},
+    {"inicio":74, "velocidad":70},
+    {"inicio":401, "velocidad":85},
+    {"inicio":10667, "velocidad":80},
+    {"inicio":10917, "velocidad":85},
+    {"inicio":19231, "velocidad":80},
+    {"inicio":20083, "velocidad":85},
+    {"inicio":43229, "velocidad":80},
+    {"inicio":43550, "velocidad":85}
+  ]
+}}</textarea><br>
+ <button type="button" onclick="procesar()">Mostrar gráfico</button><br>
+<p>Líneas de ejemplo disponibles:<ul>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_Valladolid_ariza.txt'); return false;"><b>LC Valladolid - Ariza</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_110_Villalba_Segovia.txt'); return false;"><b>LC 110 Villalba de Guadarrama - Segovia</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_130_Leon_Gijon.txt'); return false;"><b>LC 130 León - Gijón</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_824_Redondela_SdC.txt'); return false;"><b>LC 824 Redondela - Santiago de Compostela</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_202_Torralba_Soria_Cast.txt'); return false;"><b>LC 202 Torralba - Soria - Castejón</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_206_Lleida_Pobla_Segur.txt'); return false;"><b>LC 206 Lleida - La Pobla del Segur</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_010_Madrid_Sevilla.txt'); return false;"><b>LAV 010 Madrid - Sevilla</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_050_Madrid_Barcelona.txt'); return false;"><b>LAV 050 Madrid - Barcelona</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_070_Zaragoza_Huesca.txt'); return false;"><b>LAV 070 Zaragoza - Huesca</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_074_Olmedo_Medina.txt'); return false;"><b>LAV 074 Olmedo - Medina</b></a></li>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_080_Madrid_Segovia_Valladolid.txt'); return false;"><b>LAV 080 Madrid - Segovia - Valladolid</b></a></li>
+</ul>
+</p>
+ <!--<button type="button" onclick="mostrar_otra()">Otra ruta</button><br>-->
+  </form>
+<hr>
+<h2>Gráfico</h2>
+<div id="vel"><span>Pulse mostrar para ver el gráfico.</span>
+</div>
+<hr>
+<h2>Fichero vectorial</h2>
+<p>Para tener este dibujo en formato vectorial, copia y pega el código que aparezca en un fichero de texto y guárdalo con extensión SVG.</br>Ese fichero después puede ser abierto y editado con programas como <a href="https://inkscape.org/">Inkscape</a>.</p>
+<form name="frm_svg_fc">
+<textarea rows="15" cols="60" name="txtarea_svg_fc"></textarea><br>
+</form>
+
+
+<hr><footer>
+<p>Esta aplicación tiene licencia libre GPL v3.</br>
+Código fuente: <a href="https://github.com/pwnage2apps/cvmgraf">https://github.com/pwnage2apps/cvmgraf</a></br>
+Bitmessage: BM-2cT6X8N1us2jqkknP1AnjcHcCsZf5szUHY</br>
+Correo electrónico: Siento tener que escribirlo así, pero quiero evitar el correo basura. En el medio va la arroba, antes de ella va el texto "pwnage", el dígito DOS (en número, no en letras) y luego "APP" en minúsculas, y finalmente una S minúscula. Después de la arroba va lo mismo que hay antes pero añadiendo un punto, la plabra "ESY" en minúscula, y la extensión de España "ES" separada con otro punto. Si tienes dudas mira la dirección de esta página. Siento tener que ponerlo así, pero no tengo otro remedio si quiero evitar el correo basura y mantener una cierta accesibilidad.</br>
+Agradecimiento: <a href="http://www.hostinger.es/" target="_blank"><img src="http://www.hostinger.es/banners/es/hostinger-80x15-powered-1.gif" alt="Hosting Web" width="80" height="15" /></a></br>
+Nota: la información proporcionada por esta página está basada en datos antiguos, imprecisos, mezclados y no siempre bien transcritos. No es una referencia para actividades ferroviarias que vayan más allá del uso por parte de aficionados.<br>
+Hay que revertir el error: Valladolid - Ariza, si a su necesaria reapertura, no a una conversión en una inútil vía verde.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿{"fc":{
+  "titular": "LAV Madrid - Venta de Baños (080)",
+  "max_v": 320,
+  "max_d": 217600,
+  "alto": 400,
+  "ancho": 2000,
+  "minf": 200,
+  "tabla_pobl": [
+    {"nombre":"Madrid", "pos":500, "ajuste":0},
+    {"nombre":"Segovia", "pos":68300, "ajuste":0},
+    {"nombre":"Olmedo", "pos":133000, "ajuste":0},
+    {"nombre":"Valladolid", "pos":179600, "ajuste":0},
+    {"nombre":"Venta de Baños", "pos":216600, "ajuste":0}
+  ],
+  "tabla_vars": [
+    {"tabla":"tabla_vtrazado", "color":"#22f", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A) (Año 2015)"}
+  ],
+  "tabla_vtrazado": [
+{"inicio":0, "velocidad":65},
+{"inicio":1402, "velocidad":35},
+{"inicio":1440, "velocidad":65},
+{"inicio":1884, "velocidad":115},
+{"inicio":6071, "velocidad":105},
+{"inicio":6513, "velocidad":115},
+{"inicio":8254, "velocidad":165},
+{"inicio":12428, "velocidad":210},
+{"inicio":14623, "velocidad":270},
+{"inicio":21048, "velocidad":300},
+{"inicio":28575, "velocidad":290},
+{"inicio":32650, "velocidad":300},
+{"inicio":164597, "velocidad":200},
+{"inicio":168700, "velocidad":200},
+{"inicio":170358, "velocidad":180},
+{"inicio":171807, "velocidad":200},
+{"inicio":172603, "velocidad":160},
+{"inicio":177752, "velocidad":150},
+{"inicio":177827, "velocidad":160},
+{"inicio":178061, "velocidad":50},
+{"inicio":179300, "velocidad":40},
+{"inicio":179840, "velocidad":60},
+{"inicio":181241, "velocidad":120},
+{"inicio":182752, "velocidad":160},
+{"inicio":186300, "velocidad":200}
+  ]
+}}

@@ -1,0 +1,67 @@
+﻿{"fc":{
+  "titular": "Bif. Huesca - Huesca (070)",
+  "max_v": 200,
+  "max_d": 74178,
+  "alto": 400,
+  "ancho": 1000,
+  "minf": 250,
+  "tabla_pobl": [
+[
+    {"nombre":"Zaragoza (Bif. Huesca)", "pos":0, "ajuste":0},
+    {"nombre":"Villanueva de gallego", "pos":12500, "ajuste":0},
+    {"nombre":"Zuera", "pos":25700, "ajuste":0},
+    {"nombre":"Almudevar", "pos":43800, "ajuste":0},
+    {"nombre":"Tardienta", "pos":52400, "ajuste":0}
+],
+[
+    {"nombre":"Huesca", "pos":21700, "ajuste":0}
+]
+  ],
+  "tabla_vars": [
+    {"tabla":"tabla_zaragoza", "tramo":0, "color":"#22f", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A)"},
+    {"tabla":"tabla_huesca", "tramo":1, "color":"#266", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":0, "texto":"Velocidad (A)"}
+  ],
+  "tabla_tramos": [
+    {"inicio":0, "final":52478, "escala":1},
+    {"inicio":0, "final":21700, "escala":1}
+  ],
+  "tabla_lineas_verticales": [
+  ],
+  "tabla_zaragoza": [
+{"inicio":0, "velocidad":70},
+{"inicio":982, "velocidad":90},
+{"inicio":1408, "velocidad":190},
+{"inicio":4589, "velocidad":170},
+{"inicio":5443, "velocidad":125},
+{"inicio":7470, "velocidad":200},
+{"inicio":31702, "velocidad":175},
+{"inicio":32531, "velocidad":200},
+{"inicio":48780, "velocidad":200},
+{"inicio":49619, "velocidad":200}
+  ],
+  "tabla_huesca": [
+{"inicio":0, "velocidad":40},
+{"inicio":105, "velocidad":60},
+{"inicio":944, "velocidad":160},
+{"inicio":15600, "velocidad":100},
+{"inicio":18050, "velocidad":160},
+{"inicio":21538, "velocidad":40}
+  ],
+  "tabla_huesca_bak": [
+{"inicio":0, "velocidad":40},
+{"inicio":105, "velocidad":60},
+{"inicio":944, "velocidad":160},
+{"inicio":15600, "velocidad":100},
+{"inicio":18050, "velocidad":160},
+{"inicio":21538, "velocidad":40}
+  ],
+  "tabla_lineas_verticales_bak": [
+    {"punto":2000, "tramo":0},
+    {"punto":1000, "tramo":0},
+    {"punto":10, "tramo":0},
+    {"punto":10, "tramo":1},
+    {"punto":100, "tramo":1},
+    {"punto":1000, "tramo":1},
+    {"punto":500, "tramo":1}
+  ]
+}}

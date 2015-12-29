@@ -1,0 +1,135 @@
+﻿{"fc":{
+  "titular": "Torralba - Soria - Castejón de Ebro (202)",
+  "max_v": 160,
+  "max_d": 170800,
+  "alto": 400,
+  "ancho": 1000,
+  "minf": 250,
+  "tabla_pobl": [
+[
+    {"nombre":"Torralba", "pos":0, "ajuste":0},
+    {"nombre":"Adradas", "pos":33900, "ajuste":0},
+    {"nombre":"Coscurita", "pos":43000, "ajuste":0},
+    {"nombre":"Almazán", "pos":50200, "ajuste":0},
+    {"nombre":"Tardelcuende (APD)", "pos":68800, "ajuste":0},
+    {"nombre":"Quintanaredonda (APD)", "pos":74600, "ajuste":0},
+    {"nombre":"Soria", "pos":93900, "ajuste":0}
+],
+[
+    {"nombre":"(Bif. de Valcorba, S-M)", "pos":5900, "ajuste":0},
+    {"nombre":"Ólvega", "pos":48100, "ajuste":0},
+    {"nombre":"Ágreda", "pos":55400, "ajuste":0},
+    {"nombre":"Cervera del río Alhama", "pos":74900, "ajuste":0},
+    {"nombre":"Citruénigo", "pos":88600, "ajuste":0},
+    {"nombre":"Corellada (APD)", "pos":92400, "ajuste":0},
+    {"nombre":"Castejón de Ebro", "pos":103600, "ajuste":0}
+]
+  ],
+
+
+  "tabla_pobl_antigua_comentario": [
+    {"nombre":"León", "pos":0, "ajuste":0},
+    {"nombre":"La Robla", "pos":25000, "ajuste":0},
+    {"nombre":"Oviedo", "pos":139100, "ajuste":0},
+    {"nombre":"Gijón", "pos":170800, "ajuste":0}
+  ],
+  "tabla_vars": [
+    {"tabla":"tabla_v_tipo_B", "tramo":0, "color":"#fc0", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (B)"},
+    {"tabla":"tabla_v_tipo_A", "tramo":0, "color":"#f60", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A)"},
+    {"tabla":"tabla_v_tipo_N", "tramo":0, "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N)"},
+    {"tabla":"tabla_tramo_cerrado", "tramo":1, "color":"#f00", "trans":"0.2", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Tramo estúpidamente cerrado"},
+    {"tabla":"tabla_LTV0", "tramo":0, "color":"#26f", "trans":"1", "grosor":"4", "finalizar":41850, "leyenda":1, "texto":"Limitaciones de velocidad"},
+    {"tabla":"tabla_LTV1", "tramo":0, "color":"#26f", "trans":"1", "grosor":"4", "finalizar":91000, "leyenda":0, "texto":""}
+  ],
+  "tabla_tramos": [
+    {"inicio":0, "final":93900, "escala":1},
+    {"inicio":0, "final":103600, "escala":1}
+  ],
+  "tabla_v_tipo_B": [
+{"inicio":0, "velocidad":80},
+{"inicio":8400, "velocidad":85},
+{"inicio":12760, "velocidad":115},
+{"inicio":12977, "velocidad":95},
+{"inicio":14761, "velocidad":115},
+{"inicio":18500, "velocidad":95},
+{"inicio":21289, "velocidad":90},
+{"inicio":21456, "velocidad":95},
+{"inicio":26900, "velocidad":105},
+{"inicio":31897, "velocidad":100},
+{"inicio":32272, "velocidad":105},
+{"inicio":33900, "velocidad":110},
+{"inicio":43114, "velocidad":70},
+{"inicio":43274, "velocidad":105},
+{"inicio":50200, "velocidad":90},
+{"inicio":68800, "velocidad":95},
+{"inicio":74600, "velocidad":105},
+{"inicio":79400, "velocidad":120},
+{"inicio":83300, "velocidad":90},
+{"inicio":91100, "velocidad":70},
+{"inicio":92700, "velocidad":90}
+  ],
+  "tabla_v_tipo_A": [
+{"inicio":0, "velocidad":80},
+{"inicio":8400, "velocidad":85},
+{"inicio":12760, "velocidad":110},
+{"inicio":12977, "velocidad":0},
+{"inicio":14761, "velocidad":110},
+{"inicio":18500, "velocidad":90},
+{"inicio":21289, "velocidad":85},
+{"inicio":21456, "velocidad":90},
+{"inicio":26900, "velocidad":100},
+{"inicio":31897, "velocidad":95},
+{"inicio":32272, "velocidad":100},
+{"inicio":33900, "velocidad":105},
+{"inicio":43114, "velocidad":70},
+{"inicio":43274, "velocidad":105},
+{"inicio":50200, "velocidad":90},
+{"inicio":68800, "velocidad":95},
+{"inicio":74600, "velocidad":105},
+{"inicio":79400, "velocidad":120},
+{"inicio":83300, "velocidad":90},
+{"inicio":91100, "velocidad":70},
+{"inicio":92700, "velocidad":90}
+  ],
+  "tabla_v_tipo_N": [
+{"inicio":0, "velocidad":80},
+{"inicio":8400, "velocidad":85},
+{"inicio":12760, "velocidad":100},
+{"inicio":12977, "velocidad":85},
+{"inicio":14761, "velocidad":100},
+{"inicio":18500, "velocidad":80},
+{"inicio":21289, "velocidad":80},
+{"inicio":21456, "velocidad":80},
+{"inicio":26900, "velocidad":90},
+{"inicio":31897, "velocidad":85},
+{"inicio":32272, "velocidad":90},
+{"inicio":33900, "velocidad":95},
+{"inicio":43114, "velocidad":70},
+{"inicio":43274, "velocidad":105},
+{"inicio":50200, "velocidad":90},
+{"inicio":68800, "velocidad":95},
+{"inicio":74600, "velocidad":105},
+{"inicio":79400, "velocidad":120},
+{"inicio":83300, "velocidad":90},
+{"inicio":91100, "velocidad":70},
+{"inicio":92700, "velocidad":90}
+  ],
+  "tabla_tramo_cerrado": [
+{"inicio":0, "velocidad":65},
+{"inicio":1800, "velocidad":60},
+{"inicio":2200, "velocidad":65},
+{"inicio":8400, "velocidad":70},
+{"inicio":37700, "velocidad":80},
+{"inicio":48100, "velocidad":90},
+{"inicio":55400, "velocidad":70},
+{"inicio":85000, "velocidad":120},
+{"inicio":92400, "velocidad":90},
+{"inicio":102100, "velocidad":80}
+  ],
+  "tabla_LTV0": [
+{"inicio":41024, "velocidad":80}
+  ],
+  "tabla_LTV1": [
+{"inicio":58500, "velocidad":80}
+  ]
+}}

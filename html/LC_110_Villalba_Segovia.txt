@@ -1,0 +1,53 @@
+﻿{"fc":{
+  "titular": "Villalba de Guadarrama - Segovia (110)",
+  "max_v": 120,
+  "max_d": 62700,
+  "alto": 400,
+  "ancho": 1000,
+  "minf": 250,
+  "tabla_pobl": [
+    {"nombre":"Villalba de Guadarrama", "pos":0, "ajuste":0},
+    {"nombre":"Los negrales (APD)", "pos":1900, "ajuste":0},
+    {"nombre":"Alpedrete", "pos":4600, "ajuste":0},
+    {"nombre":"Collado mediano", "pos":10600, "ajuste":0},
+    {"nombre":"Los molinos - Guadarrama", "pos":14200, "ajuste":0},
+    {"nombre":"Cercedilla", "pos":19700, "ajuste":0},
+    {"nombre":"Tablada", "pos":26500, "ajuste":0},
+    {"nombre":"Los Gudillos (APD)", "pos":29800, "ajuste":0},
+    {"nombre":"San Rafael (APD)", "pos":32200, "ajuste":0},
+    {"nombre":"El Espinar", "pos":35400, "ajuste":0},
+    {"nombre":"Los Ángeles de San R (APD)", "pos":40800, "ajuste":0},
+    {"nombre":"Otero-Herreros (APD)", "pos":43800, "ajuste":0},
+    {"nombre":"Ortigosa del Monte (APD)", "pos":49200, "ajuste":0},
+    {"nombre":"Navas de Riofrío-La losa", "pos":52700, "ajuste":0},
+    {"nombre":"Segovia", "pos":62700, "ajuste":0}
+  ],
+  "tabla_vars": [
+    {"tabla":"tabla_v_tipo_A", "color":"#f80", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (resto de trenes)"},
+    {"tabla":"tabla_v_tipo_N", "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N exepto UT/440)"}
+  ],
+  "tabla_v_tipo_A": [
+    {"inicio":0, "velocidad":90},
+    {"inicio":74, "velocidad":70},
+    {"inicio":401, "velocidad":90},
+    {"inicio":10667, "velocidad":80},
+    {"inicio":10917, "velocidad":90},
+    {"inicio":19231, "velocidad":80},
+    {"inicio":20083, "velocidad":90},
+    {"inicio":43229, "velocidad":80},
+    {"inicio":43550, "velocidad":90},
+    {"inicio":49200, "velocidad":100},
+    {"inicio":62700, "velocidad":95}
+  ],
+  "tabla_v_tipo_N": [
+    {"inicio":0,      "velocidad":85},
+    {"inicio":74, "velocidad":70},
+    {"inicio":401, "velocidad":85},
+    {"inicio":10667, "velocidad":80},
+    {"inicio":10917, "velocidad":85},
+    {"inicio":19231, "velocidad":80},
+    {"inicio":20083, "velocidad":85},
+    {"inicio":43229, "velocidad":80},
+    {"inicio":43550, "velocidad":85}
+  ]
+}}

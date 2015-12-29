@@ -1,0 +1,39 @@
+﻿{"fc":{
+  "titular": "Lleida - La Pobla de Segur (206)",
+  "max_v": 120,
+  "max_d": 89800,
+  "alto": 400,
+  "ancho": 1000,
+  "minf": 250,
+  "tabla_pobl": [
+{"nombre":"Lleida Pirineus", "pos":0, "ajuste":0},
+{"nombre":"Alcoletge (APD)", "pos":6700, "ajuste":0},
+{"nombre":"Vilanova de la Barca (APD)", "pos":11800, "ajuste":0},
+{"nombre":"Térmens (APD)", "pos":16400, "ajuste":0},
+{"nombre":"Vallfogona de Balaguer (APD)", "pos":22200, "ajuste":0},
+{"nombre":"Balaguer", "pos":26100, "ajuste":0},
+{"nombre":"Gerb (APD)", "pos":30300, "ajuste":0},
+{"nombre":"Sant Llorenç de Montgai (APD)", "pos":35900, "ajuste":0},
+{"nombre":"Vilanova de la Sal (APD)", "pos":41700, "ajuste":0},
+{"nombre":"Santa Linya (APD)", "pos":44800, "ajuste":0},
+{"nombre":"Àger (APD)", "pos":55000, "ajuste":0},
+{"nombre":"Cellers-Llimiana (APD)", "pos":63400, "ajuste":0},
+{"nombre":"Guàrdia de Tremp (APD)", "pos":68200, "ajuste":0},
+{"nombre":"Palau de Noguera (APD)", "pos":72400, "ajuste":0},
+{"nombre":"Tremp", "pos":77000, "ajuste":0},
+{"nombre":"Salàs de Pallars (APD)", "pos":84200, "ajuste":0},
+{"nombre":"La Pobla de Segur ", "pos":89800, "ajuste":0}
+  ],
+  "tabla_vars": [
+    {"tabla":"tabla_vtrazado", "color":"#d02", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A)"}
+  ],
+  "tabla_vtrazado": [
+{"inicio":0, "velocidad":60},
+{"inicio":2000, "velocidad":100},
+{"inicio":6700, "velocidad":70},
+{"inicio":11800, "velocidad":60},
+{"inicio":16400, "velocidad":110},
+{"inicio":23700, "velocidad":100},
+{"inicio":26100, "velocidad":60}
+  ]
+}}

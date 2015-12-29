@@ -1,0 +1,47 @@
+﻿{"fc":{
+  "titular": "Olmedo - Camb. Medina del Campo (074)",
+  "max_v": 200,
+  "max_d": 19900,
+  "alto": 400,
+  "ancho": 1000,
+  "minf": 250,
+  "tabla_pobl": [
+[
+    {"nombre":"Olmedo (Bif.)", "pos":0, "ajuste":0},
+    {"nombre":"Cambiador de ancho", "pos":19900, "ajuste":0}
+]
+  ],
+  "tabla_vars": [
+    {"tabla":"tabla_vel_a", "tramo":0, "color":"#22f", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A)"},
+    {"tabla":"tabla_vel_b", "tramo":0, "color":"#22f", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":0, "texto":"Velocidad (B)"}
+  ],
+  "tabla_tramos": [
+    {"inicio":0, "final":19900, "escala":1}
+  ],
+  "tabla_lineas_verticales": [
+  ],
+  "tabla_vel_a": [
+{"inicio":0, "velocidad":200},
+{"inicio":4100, "velocidad":130},
+{"inicio":4400, "velocidad":95},
+{"inicio":6500, "velocidad":75},
+{"inicio":6800, "velocidad":100},
+{"inicio":7700, "velocidad":200},
+{"inicio":16294, "velocidad":175},
+{"inicio":16884, "velocidad":200},
+{"inicio":17900, "velocidad":140},
+{"inicio":17900, "velocidad":20}
+  ],
+  "tabla_vel_b": [
+{"inicio":0, "velocidad":200},
+{"inicio":4100, "velocidad":130},
+{"inicio":4400, "velocidad":100},
+{"inicio":6500, "velocidad":75},
+{"inicio":6800, "velocidad":100},
+{"inicio":7700, "velocidad":200},
+{"inicio":16294, "velocidad":180},
+{"inicio":16884, "velocidad":200},
+{"inicio":17900, "velocidad":145},
+{"inicio":17900, "velocidad":20}
+  ]
+}}
