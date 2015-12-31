@@ -8,8 +8,8 @@ function procesar(){
  var max_v = obj_json.fc.max_v;
  var max_d = obj_json.fc.max_d;
  // Márgen izquierdo y derecho
- var mizq = 150;
- var mder = 120;
+ var mizq = 50;
+ var mder = 20;
  // Altura del margen superior, se calcula en función de la leyenda
  var h_leyenda_entrada = 20;
  var num_leyendas = 0;
@@ -163,7 +163,8 @@ function procesar(){
    max_d_svg = max_d / 10000;
    for(j=0; j<tabla_tramos_svg.length; j++){
      var inicio_lineas_v = tabla_tramos_svg[j].inicio_tramo / 10000;
-     var final_lineas_v = Math.round((tabla_tramos_svg[j].fin_tramo - tabla_tramos_svg[j].inicio_tramo) / 10000);
+     //var final_lineas_v = Math.round((tabla_tramos_svg[j].fin_tramo - tabla_tramos_svg[j].inicio_tramo) / 10000);
+     var final_lineas_v = Math.ceil(tabla_tramos_svg[j].fin_tramo / 10000) - Math.floor(inicio_lineas_v);
      var suma_dist_numeros = Math.ceil((tabla_tramos_svg[j].inicio_tramo) / 10000);
      var xx_lineas_inicial = tabla_tramos_svg[j].inicio_total * www / max_d;
      //inicio_lineas_v *= 10000;
@@ -175,8 +176,10 @@ function procesar(){
      }
      // Líneas verticales para iniciar cada tramo   alert(tabla_tramos_svg[j].total_suma + " a " + xx_lineas);
      xx_lineas_inicial += mizq;
-     //txt_svg += " <line x1=\"" + (xx_lineas_inicial)  + "\" y1=\"" + msup + "\" x2=\"" + (xx_lineas_inicial) + "\" y2=\"" + (msup + hhh) + "\" stroke-opacity=\"0.25\" stroke-width=\"2\" stroke=\"#030\" />\n";
-     //txt_svg += " <text x=\"" + (xx_lineas_inicial - 5) + "\" y=\"" + (msup + hhh + 20) + "\">0</text>";
+     if(inicio_lineas_v == 0){
+       txt_svg += " <line x1=\"" + (xx_lineas_inicial)  + "\" y1=\"" + msup + "\" x2=\"" + (xx_lineas_inicial) + "\" y2=\"" + (msup + hhh) + "\" stroke-opacity=\"0.25\" stroke-width=\"2\" stroke=\"#030\" />\n";
+       txt_svg += " <text x=\"" + (xx_lineas_inicial - 5) + "\" y=\"" + (msup + hhh + 20) + "\">0</text>";
+     }
      // Líneas verticales adicionales
      if(typeof (obj_json.fc.tabla_lineas_verticales) != "undefined"){
        for(i = 0; i<obj_json.fc.tabla_lineas_verticales.length; i++){

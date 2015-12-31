@@ -8,6 +8,13 @@
   "tabla_pobl": [
 [
     {"nombre":"Palencia", "pos":297300, "ajuste":0},
+    {"nombre":"Frómista", "pos":329900, "ajuste":0},
+    {"nombre":"Osorno", "pos":347300, "ajuste":0},
+    {"nombre":"Herrera de Pisuerga", "pos":369500, "ajuste":0},
+    {"nombre":"Alar del Rey", "pos":376200, "ajuste":0},
+    {"nombre":"Aguilar de Campoo", "pos":394800, "ajuste":0},
+    {"nombre":"Mataporquera", "pos":407100, "ajuste":0},
+    {"nombre":"Reinosa", "pos":426400, "ajuste":0},
     {"nombre":"Torrelavega", "pos":485100, "ajuste":0},
     {"nombre":"Santander", "pos":514500, "ajuste":0}
 ]
