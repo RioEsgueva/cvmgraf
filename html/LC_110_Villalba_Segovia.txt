@@ -6,6 +6,7 @@
   "ancho": 1000,
   "minf": 250,
   "tabla_pobl": [
+   [
     {"nombre":"Villalba de Guadarrama", "pos":0, "ajuste":0},
     {"nombre":"Los negrales (APD)", "pos":1900, "ajuste":0},
     {"nombre":"Alpedrete", "pos":4600, "ajuste":0},
@@ -21,10 +22,16 @@
     {"nombre":"Ortigosa del Monte (APD)", "pos":49200, "ajuste":0},
     {"nombre":"Navas de Riofrío-La losa", "pos":52700, "ajuste":0},
     {"nombre":"Segovia", "pos":62700, "ajuste":0}
+   ]
   ],
   "tabla_vars": [
-    {"tabla":"tabla_v_tipo_A", "color":"#f80", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (resto de trenes)"},
-    {"tabla":"tabla_v_tipo_N", "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N exepto UT/440)"}
+    {"tabla":"tabla_v_tipo_A", "tramo":0, "color":"#f80", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (resto de trenes)"},
+    {"tabla":"tabla_v_tipo_N", "tramo":0, "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N exepto UT/440)"}
+  ],
+  "tabla_tramos": [
+    {"inicio":0, "final":62700, "escala":1}
+  ],
+  "tabla_lineas_verticales": [
   ],
   "tabla_v_tipo_A": [
     {"inicio":0, "velocidad":90},

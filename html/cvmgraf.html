@@ -27,8 +27,10 @@ Los datos están en formato JSON, que tiene un formato que es relatívamente fá
 <li><b>max_v:</b> velocidad máxima a usar en el gráfico (recomiendo usar valores similares para tipos de líneas simlares, por ejemplo, 320 para alta velocidad, 250 para velocidad alta, 160 o 200 para líneas convencionales...).</li>
 <li><b>max_d:</b> longitud de la línea en metros.</li>
 <li><b>minf:</b> márgen inferior, conviene ajustarlo para que entren todos los nombres.</li>
-<li><b>tabla_pobl:</b> tabla con las poblaciones, cada entrada tiene dos variables:<ul><li><b>nombre:</b> el nombre del lugar.</li><li><b>pos:</b> posición, medida en metros.</li><li><b>ajuste:</b> permite ajustar la posición del texto para evitar solapamientos, normalmente se deja en 0.</li></ul></li>
-<li><b>tabla_vars:</b> tabla donde se describe el aspecto que mostrará el gráfico:<ul><li><b>tabla:</b> el nombre interno de la tabla.</li><li><b>color:</b> el color de relleno del gráfico (valen varios formatos usados en CSS: nombre, #RGB, HSL(), RGB()... consulta algún manual de CSS o HTML si no lo conoces).</li><li><b>trans:</b> transparencia del relleno o de la línea (1 es opaco).</li><li><b>grosor:</b> si es 0 se dibuja un área sólida, si es un número diferente será sólo la línea de velocidades.</li><li><b>finalizar:</b> si es 0 la línea o área se termina hasta el final del gráfico, si es 0 en cambio se deja incompleto (es útil para datos relativos a zonas sueltas del gráfico).</li><li><b>leyenda:</b> si vale 0 la línea no se muestra en la leyenda.</li><li><b>texto:</b> el texto que se muestra.</li></ul></li>
+<li><b>tabla_pobl:</b> tabla con las poblaciones, hay un vector con todos los tramos, y dentro de cada elemento una tabla con los nombres de las poblaciones y su posición en ese tramo. Cada entrada tiene dos variables:<ul><li><b>nombre:</b> el nombre del lugar.</li><li><b>pos:</b> posición, medida en metros.</li><li><b>ajuste:</b> permite ajustar la posición del texto para evitar solapamientos, normalmente se deja en 0.</li></ul></li>
+<li><b>tabla_vars:</b> tabla donde se describe el aspecto que mostrará el gráfico, se organiza por líneas, cada una de las cuales tiene una serie de puntos definidos en una lista aparte, las opciones son estas:<ul><li><b>tabla:</b> el nombre interno de la tabla.</li><li><b>tramo:</b> el tramo donde está la línea mostrada.</li><li><b>color:</b> el color de relleno del gráfico (valen varios formatos usados en CSS: nombre, #RGB, HSL(), RGB()... consulta algún manual de CSS o HTML si no lo conoces).</li><li><b>trans:</b> transparencia del relleno o de la línea (1 es opaco).</li><li><b>grosor:</b> si es 0 se dibuja un área sólida, si es un número diferente será sólo la línea de velocidades.</li><li><b>finalizar:</b> si es 0 la línea o área se termina hasta el final del gráfico, si es 0 en cambio se deja incompleto (es útil para datos relativos a zonas sueltas del gráfico).</li><li><b>leyenda:</b> si vale 0 la línea no se muestra en la leyenda.</li><li><b>texto:</b> el texto que se muestra.</li></ul></li>
+<li><b>tabla_tramos:</b> tabla con los tramos que se representan, cada elemento consta de:<ul><li><b>inicio:</b> kilómetro al inicio del tramo, normalmente es 0 pero no siempre.</li><li><b>final:</b> punto kilométrico donde termina, si el inicio es 0 este valor es la longitud del tramo.</li><li><b>escala:</b> en esta versión debe valer 1.</li></ul></li>
+<li><b>tabla_lineas_verticales:</b> tabla con las la lista de líneas verticales adicionales, útiles en cambios de línea donde se continúa la kilometración:<ul><li><b>punto:</b> punto kilométrico donde estaría la línea.</li><li><b>tramo:</b> tramo donde se encuentra ese punto kilométrico</li></ul></li>
 <li><b><i>(nombre interno de cada tabla)</i>:</b> es cada tabla con los datos de la velocidad, cada entrada tiene dos variables:<ul><li><b>inicio:</b> punto donde está cada cambio de velocidad, con la distancia medida en metros.</li><li><b>velocidad:</b> velocidad del nuevo tramo.</li></ul></li>
 </ul>
 <p>Una hoja de cálculo puede ser de ayuda para elaborar los datos (<a href="Valladolid-Ariza2.ods">puedes usar esta</a>).<br>
@@ -50,6 +52,7 @@ El gráfico se puede copiar guardando el código que aparece en el segundo recua
   "ancho": 1000,
   "minf": 250,
   "tabla_pobl": [
+   [
     {"nombre":"Villalba de Guadarrama", "pos":0, "ajuste":0},
     {"nombre":"Los negrales (APD)", "pos":1900, "ajuste":0},
     {"nombre":"Alpedrete", "pos":4600, "ajuste":0},
@@ -65,10 +68,16 @@ El gráfico se puede copiar guardando el código que aparece en el segundo recua
     {"nombre":"Ortigosa del Monte (APD)", "pos":49200, "ajuste":0},
     {"nombre":"Navas de Riofrío-La losa", "pos":52700, "ajuste":0},
     {"nombre":"Segovia", "pos":62700, "ajuste":0}
+   ]
   ],
   "tabla_vars": [
-    {"tabla":"tabla_v_tipo_A", "color":"#f80", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (resto de trenes)"},
-    {"tabla":"tabla_v_tipo_N", "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N exepto UT/440)"}
+    {"tabla":"tabla_v_tipo_A", "tramo":0, "color":"#f80", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (resto de trenes)"},
+    {"tabla":"tabla_v_tipo_N", "tramo":0, "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N exepto UT/440)"}
+  ],
+  "tabla_tramos": [
+    {"inicio":0, "final":62700, "escala":1}
+  ],
+  "tabla_lineas_verticales": [
   ],
   "tabla_v_tipo_A": [
     {"inicio":0, "velocidad":90},
