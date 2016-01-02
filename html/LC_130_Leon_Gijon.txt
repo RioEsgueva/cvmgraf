@@ -6,7 +6,7 @@
   "ancho": 2000,
   "minf": 250,
   "tabla_pobl": [
-
+[
 {"nombre":"León", "pos":0, "ajuste":0},
 {"nombre":"Santibáñez", "pos":10800, "ajuste":0},
 {"nombre":"Los Cuadros (APD)", "pos":14300, "ajuste":0},
@@ -52,6 +52,7 @@
 {"nombre":"Veriña", "pos":166400, "ajuste":0},
 {"nombre":"Calzada de Asturias (APD)", "pos":168800, "ajuste":0},
 {"nombre":"Gijón-San Crespo", "pos":170800, "ajuste":0}
+]
   ],
 
 
@@ -62,10 +63,15 @@
     {"nombre":"Gijón", "pos":170800, "ajuste":0}
   ],
   "tabla_vars": [
-    {"tabla":"tabla_v_tipo_B", "color":"#fc0", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (B)"},
-    {"tabla":"tabla_v_tipo_A", "color":"#f60", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A)"},
-    {"tabla":"tabla_v_tipo_N", "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N)"},
-    {"tabla":"tabla_v_tipo_80", "color":"#0f0", "trans":"1", "grosor":"2", "finalizar":95900, "leyenda":1, "texto":"Velocidad (Tipo 80 & inferiores en sentido Gijón)"}
+    {"tabla":"tabla_v_tipo_B", "tramo":0, "color":"#fc0", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (B)"},
+    {"tabla":"tabla_v_tipo_A", "tramo":0, "color":"#f60", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A)"},
+    {"tabla":"tabla_v_tipo_N", "tramo":0, "color":"#f00", "trans":"0.9", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (N)"},
+    {"tabla":"tabla_v_tipo_80", "tramo":0, "color":"#0f0", "trans":"1", "grosor":"2", "finalizar":95900, "leyenda":1, "texto":"Velocidad (Tipo 80 & inferiores en sentido Gijón)"}
+  ],
+  "tabla_tramos": [
+    {"inicio":0, "final":170800, "escala":1}
+  ],
+  "tabla_lineas_verticales": [
   ],
   "tabla_v_tipo_B": [
 {"inicio":0, "velocidad":155},

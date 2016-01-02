@@ -19,7 +19,7 @@
   ],
   "tabla_vars": [
     {"tabla":"tabla_zaragoza", "tramo":0, "color":"#22f", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A)"},
-    {"tabla":"tabla_huesca", "tramo":1, "color":"#266", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":0, "texto":"Velocidad (A)"}
+    {"tabla":"tabla_huesca", "tramo":1, "color":"#266", "trans":"0.8", "grosor":"0", "finalizar":0, "leyenda":1, "texto":"Velocidad (A, sobre tercer raíl)"}
   ],
   "tabla_tramos": [
     {"inicio":0, "final":52478, "escala":1},

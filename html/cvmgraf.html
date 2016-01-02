@@ -12,7 +12,8 @@
 <header>
 <h1 class="logo_txt"><span class="letra1">C</span>VMgraf</h1>
 <p class="beta_webapp logo_txt">WEBAPP &nbsp;&nbsp;&nbsp; (alfa)</p>
-<p>Esta aplicación crea gráficos de velocidades en líneas de tren, dando una interpretación gráfica a la información recogida en los cuadros de velocidades máximas (CVMs) de ADIF.<br>Esta página usa galletas (<i>cookies</i>) para mostrar la publicidad, más información <a href="../galletas.html">aquí.</a></p>
+<p>Esta aplicación crea gráficos de velocidades en líneas de tren, dando una interpretación gráfica a la información recogida en los cuadros de velocidades máximas (CVMs) de ADIF o velocidades de rutas. Esta aplicación permite hacer gráficos que muestren las prestaciones de líneas de tren, servicios, ganancias de tiempo con obras de mejora...<br>
+Esta página usa galletas (<i>cookies</i>) para mostrar la publicidad, más información <a href="../galletas.html">aquí.</a></p>
 </header>
 <br>
 
@@ -105,7 +106,8 @@ El gráfico se puede copiar guardando el código que aparece en el segundo recua
   ]
 }}</textarea><br>
  <button type="button" onclick="procesar()">Mostrar gráfico</button><br>
-<p>Líneas de ejemplo disponibles:<ul>
+<p>Líneas de ejemplo:<ul>
+<li>Convencionales:<ul>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_Valladolid_ariza.txt'); return false;"><b>LC Valladolid - Ariza</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_110_Villalba_Segovia.txt'); return false;"><b>LC 110 Villalba de Guadarrama - Segovia</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_130_Leon_Gijon.txt'); return false;"><b>LC 130 León - Gijón</b></a></li>
@@ -113,11 +115,17 @@ El gráfico se puede copiar guardando el código que aparece en el segundo recua
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_202_Torralba_Soria_Cast.txt'); return false;"><b>LC 202 Torralba - Soria - Castejón</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_206_Lleida_Pobla_Segur.txt'); return false;"><b>LC 206 Lleida - La Pobla del Segur</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LC_824_Redondela_SdC.txt'); return false;"><b>LC 824 Redondela - Santiago de Compostela</b></a></li>
+</ul></li>
+<li>Alta velocidad:<ul>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_010_Madrid_Sevilla.txt'); return false;"><b>LAV 010 Madrid - Sevilla</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_050_Madrid_Barcelona.txt'); return false;"><b>LAV 050 Madrid - Barcelona</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_070_Zaragoza_Huesca.txt'); return false;"><b>LAV 070 Zaragoza - Huesca</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_074_Olmedo_Medina.txt'); return false;"><b>LAV 074 Olmedo - Medina</b></a></li>
 <li><a class="btn_ruta" href="#" onclick="cargar_ruta('LAV_080_Madrid_Segovia_Valladolid.txt'); return false;"><b>LAV 080 Madrid - Segovia - Valladolid</b></a></li>
+</ul></li>
+<li>Rutas:<ul>
+<li><a class="btn_ruta" href="#" onclick="cargar_ruta('Ruta_12102_Leon_Gijon.txt'); return false;"><b>Ruta 12102 León - Gijón</b></a></li>
+</ul></li>
 </ul>
 </p>
  <!--<button type="button" onclick="mostrar_otra()">Otra ruta</button><br>-->
